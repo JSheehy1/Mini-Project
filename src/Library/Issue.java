@@ -2,7 +2,7 @@ package Library;
 
 import java.io.Serializable;
 
-public class Issue extends Books  implements Serializable {
+public class Issue extends Books implements Serializable {
 
     private int issueID;
     private int userID;
