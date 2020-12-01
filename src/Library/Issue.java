@@ -2,7 +2,7 @@ package Library;
 
 import java.io.Serializable;
 
-public class Issue extends Books implements Serializable {
+public class Issue implements Serializable {
 
     private int issueID;
     private int userID;
@@ -30,6 +30,10 @@ public class Issue extends Books implements Serializable {
         this.userID = userID;
     }
 
+    public void setBookID(int bookID) {
+        this.bookID = bookID;
+    }
+
     public void setIssueDate(String issueDate) {
         this.issueDate = issueDate;
     }
@@ -54,6 +58,10 @@ public class Issue extends Books implements Serializable {
         return userID;
     }
 
+    public int getBookID() {
+        return bookID;
+    }
+
     public String getIssueDate() {
         return issueDate;
     }
@@ -72,6 +80,6 @@ public class Issue extends Books implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("Issue ID: %s\nUser ID: %s\nIssue Date: %s\nPeriod: %s\nReturn Date: %s\nFine: %.2f\n",getIssueID(),getUserID(),getIssueDate(),getPeriod(),getReturnDate(),getFine());
+        return String.format("Issue ID: %s\nUser ID: %s\nBook ID: %s\nIssue Date: %s\nPeriod: %s\nReturn Date: %s\nFine: %.2f\n",getIssueID(),getUserID(),getBookID(),getIssueDate(),getPeriod(),getReturnDate(),getFine());
     }
 }
