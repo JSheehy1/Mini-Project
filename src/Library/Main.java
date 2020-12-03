@@ -59,7 +59,7 @@ public class Main extends JFrame implements ActionListener {
 
              try {
                  imgLabel = new JLabel();
-                 imgLabel.setIcon(new ImageIcon(getClass().getResource("logo.png")));
+                 imgLabel.setIcon(new ImageIcon(getClass().getResource("books.jpg")));
 
                  imgLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
                  wlcPanel.add(imgLabel);
@@ -73,7 +73,7 @@ public class Main extends JFrame implements ActionListener {
 
              buttonC = new JPanel();
 
-             titledBorder = new TitledBorder("Click one of the buttons");
+             titledBorder = new TitledBorder("Shortcut Button");
              titledBorder.setTitleColor(Color.RED);
 
              buttonC.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
@@ -89,13 +89,22 @@ public class Main extends JFrame implements ActionListener {
              usersButton.addActionListener(this);
              buttonC.add(usersButton);
 
-             add(wlcPanel);
-             add(buttonC);
-
              setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
              setVisible(true);
 
 
+         }
+
+         public void createBookMenu() {
+             JMenuItem item;
+
+             booksMenu = new JMenu("Books");
+             booksMenu.setMnemonic(KeyEvent.VK_C);
+
+             item = new JMenuItem("View Books");
+             item.setMnemonic(KeyEvent.VK_A);
+             item.addActionListener(this);
+             booksMenu.add(item);
          }
 
     public static void main(String[] args) {
