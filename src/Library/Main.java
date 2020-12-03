@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
-public class Main extends JFrame implements ActionListener {
+public class Main extends JFrame implements ActionListener{
          JMenu booksMenu;
          JMenu usersMenu;
          JLabel imgLabel;
@@ -44,18 +44,17 @@ public class Main extends JFrame implements ActionListener {
              menuBar.add(booksMenu);
              menuBar.add(usersMenu);
 
-
              wlcPanel = new JPanel();
              wlcPanel.add(Box.createVerticalStrut(10));
              wlcPanel.setLayout(new BoxLayout(wlcPanel, BoxLayout.Y_AXIS));
 
              welcomeLabel = new JLabel("Welcome to Apex Library");
-             welcomeLabel.setFont(new Font("serif",4,25));
-             welcomeLabel.setForeground(Color.RED);
+             welcomeLabel.setFont(new Font("serif",3,20));
+             welcomeLabel.setForeground(Color.BLUE);
 
              welcomeLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
              wlcPanel.add(welcomeLabel);
-             wlcPanel.add(Box.createVerticalStrut(30));
+             wlcPanel.add(Box.createVerticalStrut(35));
 
              try {
                  imgLabel = new JLabel();
@@ -89,28 +88,18 @@ public class Main extends JFrame implements ActionListener {
              usersButton.addActionListener(this);
              buttonC.add(usersButton);
 
+             add(wlcPanel);
+             add(buttonC);
+
              setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
              setVisible(true);
-
-
          }
 
-         public void createBookMenu() {
-             JMenuItem item;
 
-             booksMenu = new JMenu("Books");
-             booksMenu.setMnemonic(KeyEvent.VK_C);
-
-             item = new JMenuItem("View Books");
-             item.setMnemonic(KeyEvent.VK_A);
-             item.addActionListener(this);
-             booksMenu.add(item);
-         }
 
     public static void main(String[] args) {
         new Main();
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
