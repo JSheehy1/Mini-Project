@@ -6,7 +6,6 @@ import java.util.GregorianCalendar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Iterator;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
@@ -98,20 +97,6 @@ public class Main extends JFrame implements ActionListener {
 
 
          }
-
-         public void createBookMenu() {
-             JMenuItem item;
-
-             booksMenu = new JMenu("Books");
-             booksMenu.setMnemonic(KeyEvent.VK_C);
-
-             item = new JMenuItem("View Books");
-             item.setMnemonic(KeyEvent.VK_A);
-             item.addActionListener(this);
-             booksMenu.add(item);
-         }
-
-
 
     public static void main(String[] args) {
         new Main();
