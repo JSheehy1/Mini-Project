@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class Main {
+public class Main extends Books {
     public static void main(String[] args) {
 
         Books b1 = new Books("01","Life of Pi",10,"Action/Adventure");
