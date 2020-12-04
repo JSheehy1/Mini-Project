@@ -94,7 +94,19 @@ public class Main extends JFrame implements ActionListener{
         setVisible(true);
     }
 
-    public static void main(String[] args) {new Main();}
+    public static void main(String[] args) {
+
+        Books b1 = new Books("01","Decline and Fall",34,"Non-Fiction");
+        Books b2 = new Books("02","The Unconsoled",30,"Fiction");
+        Books b3 = new Books("03","The Lord of the Rings",60,"Fantasy");
+        Books b4 = new Books("04","Dracula",55,"Horror");
+        Books b5 = new Books("05","Life of PI",9,"Adventure");
+        Books b6 = new Books("06","To Kill a Mockingbird",10,"Classic");
+        Books b7 = new Books("07","Watchmen",20,"Graphic novel");
+        Books b8 = new Books("08","The Adventures of Sherlock Holmes",10,"Detective/Mystery");
+
+        Books allBooks[] = {b1,b2,b3,b4,b5,b6,b7,b8};
+    }
 
 
 
@@ -102,4 +114,5 @@ public class Main extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
 
     }
+
 }
