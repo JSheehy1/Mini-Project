@@ -105,7 +105,7 @@ public class Main extends Books {
         Books bookToAmend=null;
 
         for(Books bk : foundBooks)
-            if(bk !=null && bk.getBookID()==searchID)
+            if(bk !=null && bk.getBookID()==String.valueOf(searchID))
                 bookToAmend = bk;
 
         String amendChoice = JOptionPane.showInputDialog("The deatails of the book you wish to amend are:\n\n" +
@@ -133,7 +133,7 @@ public class Main extends Books {
             case "2":
                 String newPrice = JOptionPane.showInputDialog("Please enter the new price for the book");
 
-                bookToAmend.setPrice(newPrice);
+                bookToAmend.setPrice(Double.parseDouble(newPrice));
 
                 break;
         }
@@ -164,7 +164,7 @@ public class Main extends Books {
         Books bookToRemove=null;
 
         for (Books bk : foundBooks)
-            if(bk != null && bk.getBookID()==searchID)
+            if(bk != null && bk.getBookID()==String.valueOf(searchID))
                 bookToRemove = bk;
 
         int removeChoice = JOptionPane.showConfirmDialog(null,"The details of the book you wish to amend are:\n\n" +
