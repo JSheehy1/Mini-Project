@@ -1,11 +1,16 @@
 package Library;
 
+import javafx.beans.binding.ListExpression;
+
 import javax.swing.*;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
 public class Main extends Books {
+    private static ListExpression<Object> v;
+
     /**
      *
      * @param args
@@ -184,18 +189,10 @@ public class Main extends Books {
     }
 
     public static void viewBooks(ArrayList<Books> allBooks) {
-        String allBookData="";
-        Books bk;
-
-        Iterator<Books> iterator = allBooks.iterator();
-
-        while(iterator.hasNext()) {
-            bk = iterator.next();
-            if (bk !=null)
-                allBookData += bk + "\n";
+        Iterator vEnum = v.iterator();
+        System.out.println("\nElements in Library:");
+        while (vEnum.hasNext()) {
+            System.out.print(vEnum.next() + " ");
         }
-
-        JOptionPane.showMessageDialog(null,allBookData,
-                "List of all Books",JOptionPane.INFORMATION_MESSAGE);
     }
 }
