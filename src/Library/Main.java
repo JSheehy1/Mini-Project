@@ -113,7 +113,7 @@ public class Main extends Books {
             if(bk !=null && bk.getBookID()==String.valueOf(searchID))
                 bookToAmend = bk;
 
-        String amendChoice = JOptionPane.showInputDialog("The deatails of the book you wish to amend are:\n\n" +
+        String amendChoice = JOptionPane.showInputDialog("The details of the book you wish to amend are:\n\n" +
                 bookToAmend + "\n\n1. Amend Book ID\n2. Amend Name" +
                 "\n3. Cancel Amendment\n\nPlease enter your choice");
 
