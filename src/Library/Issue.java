@@ -58,8 +58,8 @@ public class Issue extends Books implements Serializable {
         return userID;
     }
 
-    public int getBookID() {
-        return bookID;
+    public String getBookID() {
+        return String.valueOf(bookID);
     }
 
     public String getIssueDate() {
